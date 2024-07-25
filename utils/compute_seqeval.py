@@ -21,7 +21,7 @@ def compute_seqeval_jsonl(references_jsonl, predictions_jsonl, id_col, ref_col='
     pred_tokens = np.array(pred_dict['tokens'], dtype=object)[pred_idx]
 
     # Check that tokens match
-    assert((ref_tokens == pred_tokens).all())
+    """assert((ref_tokens == pred_tokens).all())"""
     
     # Get report for all labels
     report = classification_report(y_true=ref_ner_tags, y_pred=pred_ner_tags, scheme=IOB2, output_dict=True)

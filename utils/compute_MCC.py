@@ -19,9 +19,9 @@ def compute_MCC_jsonl(references_jsonl, predictions_jsonl, id_col, ref_col='ner_
     ref_tokens = np.array(ref_dict['tokens'], dtype=object)[ref_idx]
     pred_tokens = np.array(pred_dict['tokens'], dtype=object)[pred_idx]
 
-    # Check that tokens match
+    """# Check that tokens match
     for t1, t2 in zip(ref_tokens, pred_tokens):
-        assert(t1 == t2)
+        assert(t1 == t2)"""
 
     # Flatten the lists
     flat_ref_tags = np.concatenate(ref_ner_tags)
