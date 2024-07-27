@@ -38,7 +38,7 @@ def compute_seqeval_jsonl(references_jsonl, predictions_jsonl, id_col, ref_col='
             "precision": score["precision"],
             "recall": score["recall"],
             "f1": score["f1-score"],
-            "suport": score["support"],
+            "support": score["support"],
         }
         for type_name, score in report.items()
     }
